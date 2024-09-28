@@ -1,17 +1,25 @@
 [tool.poetry]
-name = "group-project"
+package-mode = false
+name = "algo_fairness_project"
 version = "0.1.0"
 description = "\"Projet fairness avec Farah/Zak/Saf/Tonio et moi\""
 authors = ["CharlDc9 <charldec99@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
-numpy = "^2.1.1"
-pandas = "^2.2.3"
-seaborn = "^0.13.2"
-matplotlib = "^3.9.2"
-
+python = ">=3.9,<3.10"
+numpy = "<1.23"  # Compatible with older versions of Numba
+pandas = "^1.3.3"
+seaborn = "^0.11.2"
+matplotlib = "==3.5.3"  # Downgraded to avoid colorbar issues
+scikit-learn = "^1.0.0"
+openpyxl = "^3.0.9"
+xgboost = "^1.4.2"
+shap = "==0.39.0"  # Compatible version known to work
+numba = "0.53.1"  # Fixed version known to work with numpy < 1.23
+ipykernel = "^6.29.5"
+xper = {git = "https://github.com/hi-paris/XPER.git"}
+nbformat = "^5.10.4"
 
 [build-system]
 requires = ["poetry-core"]
